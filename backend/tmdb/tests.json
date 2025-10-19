@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Get trending movies and series",
+      "method": "GET",
+      "path": "/?type=trending",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "results": "array",
+        "page": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get popular movies",
+      "method": "GET",
+      "path": "/?type=movies",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "results": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
